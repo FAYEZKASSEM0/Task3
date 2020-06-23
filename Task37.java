@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Task37 {
 
+     //write a program take a number from user “ whatever number of digits “ and then display summation of digits and stop where summation is one digit
     public static void main(String[] args) {
         System.out.print("please enter a number: ");
         Scanner t = new Scanner(System.in);
