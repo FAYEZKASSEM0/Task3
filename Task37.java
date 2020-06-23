@@ -1,31 +1,38 @@
-package task37;
+package test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task37 {
+public class Test {
 
-     //write a program take a number from user “ whatever number of digits “ and then display summation of digits and stop where summation is one digit
     public static void main(String[] args) {
+        List<String> temp = new ArrayList<>();
+        List<Integer> nums = new ArrayList<>();
+        int sum = 0;
+        nums.add(0);
+        nums.add(1);
+
         System.out.print("please enter a number: ");
         Scanner t = new Scanner(System.in);
-        long num = t.nextLong();
-        int nums[] = new int[19];
-
-        int sum = 0;
-        for (int j = 0; num > 9; j++) {
-            for (int i = 0; i < 19; i++) {
-                int dig = (int) (num % 10);
-                nums[i] = dig;
-                num = num / 10;
-                sum = sum + nums[i];
-            }
-            num = sum;
+        String num = t.nextLine();
+        
+        for (int j = 0; nums.size() > 1; j++) {
             sum = 0;
-            for (int i = 0; i < 19; i++) {
-                nums[i] = 0;
+            nums.clear();
+            
+            String strarr[] = num.split("");
+            temp = Arrays.asList(strarr);
+            for (int i = 0; i < temp.size(); i++) {
+                nums.add(Integer.parseInt(temp.get(i)));
+                sum = sum + nums.get(i);
             }
 
+            num = String.valueOf(sum);
+            
         }
-        System.out.println(num);
+        System.out.println(sum);
+
     }
 }
