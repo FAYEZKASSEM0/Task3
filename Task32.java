@@ -3,6 +3,13 @@ package task32;
 public class Task32 {
 
     public static void main(String[] args) {
+       /*PRINT
+             1
+            12
+           123
+          1234
+         12345
+         */
         for (int i = 0; i <= 5; i += 1) {
             for (int k =4-i; k>=0; k--)
                 System.out.print(" ");
