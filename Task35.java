@@ -3,6 +3,14 @@ package task35;
 public class Task35 {
 
     public static void main(String[] args) {
+       /* PRINT 
+            *
+           ***
+          *****
+           ***
+            *
+        */    
+        
         int row, spc, roundspc, ast, roundast, discound =1 ;
         for (row = 1; row <= 5; row++) {
             roundspc = (row <=3 ) ? 3 - row : row - 3;
